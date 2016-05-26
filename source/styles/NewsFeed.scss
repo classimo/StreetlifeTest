@@ -1,0 +1,121 @@
+.UserComments{
+  .usercomment-reply {
+    margin-left: 1.25rem;
+    margin-top: 1.25rem !important;
+  }
+  .usercomment {
+    margin-top: 1.25rem;
+  }
+  .usercomment-header {
+    margin-bottom: 1rem;
+    img {
+      border-radius: 100%;
+      float: left;
+      height: 2rem;
+      width: 2rem;
+    }
+    p {
+      .usercomment-name {
+        @include headerText;
+        display: block;
+        font-size: $font_size_default;
+        margin-bottom: 0.25rem;
+      }
+      .usercomment-time {
+        color: $greyscale_40;
+        display: block;
+        font-size: $font_size_x_small;
+      }
+    }
+    img + p {
+      padding-left: 2.5rem;
+      padding-top: 0.5em;
+    }
+  }
+  .usercomment-body {
+    margin-bottom: 1rem;
+    p {
+      color: $greyscale_40;
+      font-size: $font_size_small;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+  }
+  .usercomment-footer {
+    border-bottom: 1px solid $greyscale_20;
+    padding-bottom: .75rem;
+    &.border-top{
+      border-top: 1px solid $greyscale_20;
+      padding-top: .75rem;
+    }
+    fieldset{
+      /* width:50%;
+       display: inline-block;*/
+      span{
+        vertical-align: middle;
+        margin-left: .25rem;
+      }
+    }
+    .vote-result{
+      margin-top: .5rem;
+      .vote-result-label{
+        display: table-cell;
+        white-space: nowrap;
+        span{
+          display: block !important;
+          color: $greyscale_40;
+          font-size: $font_size_small;
+        }
+      }
+      .vote-result-bar{
+        display: table-cell;
+        width: 99%;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+  .usercomment-btn-vote {
+    @include headerText;
+    background-color: $bluescale_20;
+    border: 1px solid $bluescale_60;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 2px 0 $greyscale_30;
+    color: $bluescale_70;
+    display: block;
+    float: left;
+    font-size: $font_size_small;
+    height: 1.75rem;
+    line-height: 1.65rem;
+    margin: 0 0.5rem 0 0;
+    width: 4.5rem;
+    &:hover {
+      box-shadow: 0 0 7px hsla(197, 100%, 30%, 0.75);
+    }
+    &.usercomment-btn-vote-grey {
+      background-color: $greyscale_10;
+      border-color: $greyscale_40;
+      color: $greyscale_70;
+      &:hover {
+        box-shadow: 0 0 7px $greyscale_40;
+      }
+    }
+  }
+  .usercomment-btn-reply,
+  .usercomment-btn-report {
+    @include headerText;
+    border: 1px solid transparent;
+    display: block;
+    float: left;
+    font-size: $font_size_small;
+    height: 1.75rem;
+    line-height: 1.65rem;
+    width: 3rem;
+    &:hover {
+      color: $bluescale_50;
+    }
+  }
+  .usercomment-form-container {
+    margin-top: 1.25rem;
+  }
+
+}
