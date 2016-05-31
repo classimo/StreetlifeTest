@@ -16,7 +16,10 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
 
-        '/secure.main.css',
+
+
+        {pattern: 'source/styles/**/*', watched: true, included: false, served: true},
+        'source/styles/NewsFeed.css',
         'tests/*.js',
     ],
 

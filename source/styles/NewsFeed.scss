@@ -1,121 +1,164 @@
-.UserComments{
-  .usercomment-reply {
-    margin-left: 1.25rem;
-    margin-top: 1.25rem !important;
-  }
-  .usercomment {
+
+  .Message {
     margin-top: 1.25rem;
-  }
-  .usercomment-header {
-    margin-bottom: 1rem;
-    img {
-      border-radius: 100%;
-      float: left;
-      height: 2rem;
-      width: 2rem;
+    //margin-left: 1.25rem;
+    &.leave{
+      opacity: 1;
     }
-    p {
-      .usercomment-name {
-        @include headerText;
-        display: block;
-        font-size: $font_size_default;
-        margin-bottom: 0.25rem;
-      }
-      .usercomment-time {
-        color: $greyscale_40;
-        display: block;
-        font-size: $font_size_x_small;
-      }
+    &.appear{
+      opacity: 0;
     }
-    img + p {
-      padding-left: 2.5rem;
-      padding-top: 0.5em;
+    &.fade-in{
+      animation: entry-animation .5s linear forwards;
+      -webkit-animation: entry-animation .5s linear forwards;
+      -o-animation: entry-animation .5s linear forwards;
+      -moz-animation: entry-animation .5s linear forwards;
+      opacity: 1;
     }
-  }
-  .usercomment-body {
-    margin-bottom: 1rem;
-    p {
-      color: $greyscale_40;
-      font-size: $font_size_small;
-      line-height: 1.4;
+    .message-header {
       margin-bottom: 1rem;
-    }
-  }
-  .usercomment-footer {
-    border-bottom: 1px solid $greyscale_20;
-    padding-bottom: .75rem;
-    &.border-top{
-      border-top: 1px solid $greyscale_20;
-      padding-top: .75rem;
-    }
-    fieldset{
-      /* width:50%;
-       display: inline-block;*/
-      span{
-        vertical-align: middle;
-        margin-left: .25rem;
+      canvas {
+        border-radius: 100%;
+        float: left;
+        height: 2rem;
+        width: 2rem;
       }
-    }
-    .vote-result{
-      margin-top: .5rem;
-      .vote-result-label{
-        display: table-cell;
-        white-space: nowrap;
-        span{
-          display: block !important;
-          color: $greyscale_40;
-          font-size: $font_size_small;
+      h5{
+        font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      }
+        .message-name {
+          font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+          display: block;
+          font-size: 0.8rem;
+          margin-bottom: 0.25rem;
+          padding-left: 2.5rem;
         }
-      }
-      .vote-result-bar{
-        display: table-cell;
-        width: 99%;
-        padding-left: 0.5rem;
+        .message-time {
+          font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+          color: hsl(216, 8%, 55%);
+          display: block;
+          font-size: 0.8rem;
+          padding-left: 2.5rem;
+        }
+    }
+    .message-body {
+      font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      margin-bottom: 1rem;
+      color: hsl(216, 8%, 55%);
+      font-size: .8rem;
+      line-height: 1.5;
+    }
+  .message-footer {
+    border-bottom: 1px solid hsl(216, 8%, 88%);
+    padding-bottom: .75rem;
+
+    .comments-count {
+      font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      color: hsl(216, 8%, 55%);
+      display: block;
+      font-size: 0.8rem;
+    }
+    .message-topics{
+      margin-bottom: 1rem;
+      height: 1.6rem;
+      .topic{
+        font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        background-color: white;
+        font-size: .6rem;
+        color: #838a95;
+        text-transform: uppercase;
+        border: 1px solid #dee0e3;
+        border-radius: .25rem;
+        padding: .4rem;
+        margin-right: .5rem;
       }
     }
   }
-  .usercomment-btn-vote {
-    @include headerText;
-    background-color: $bluescale_20;
-    border: 1px solid $bluescale_60;
-    border-radius: 0.2rem;
-    box-shadow: 1px 1px 2px 0 $greyscale_30;
-    color: $bluescale_70;
-    display: block;
-    float: left;
-    font-size: $font_size_small;
-    height: 1.75rem;
-    line-height: 1.65rem;
-    margin: 0 0.5rem 0 0;
-    width: 4.5rem;
-    &:hover {
-      box-shadow: 0 0 7px hsla(197, 100%, 30%, 0.75);
-    }
-    &.usercomment-btn-vote-grey {
-      background-color: $greyscale_10;
-      border-color: $greyscale_40;
-      color: $greyscale_70;
-      &:hover {
-        box-shadow: 0 0 7px $greyscale_40;
+}
+
+  .Comment {
+    padding-top: 1.25rem;
+    background-color: hsl(216, 8%, 98%);;
+    .comment-header {
+      margin-left: .25rem;
+      margin-bottom: 1rem;
+      canvas {
+        border-radius: 100%;
+        float: left;
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .comment-name {
+        font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+        display: block;
+        font-size: 0.8rem;
+        margin-bottom: 0.25rem;
+        padding-left: 2.5rem;
+      }
+      .comment-time {
+        font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+        color: hsl(216, 8%, 55%);
+        display: block;
+        font-size: 0.8rem;
+        padding-left: 2.5rem;
       }
     }
-  }
-  .usercomment-btn-reply,
-  .usercomment-btn-report {
-    @include headerText;
-    border: 1px solid transparent;
-    display: block;
-    float: left;
-    font-size: $font_size_small;
-    height: 1.75rem;
-    line-height: 1.65rem;
-    width: 3rem;
-    &:hover {
-      color: $bluescale_50;
+    .comment-body {
+      font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      margin-bottom: 1rem;
+      margin-left: .25rem;
+      color: hsl(216, 8%, 55%);
+      font-size: .8rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      a{
+        font-family: 'Gotham Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+        margin-bottom: 1rem;
+        color: hsl(197, 100%, 42%);
+        font-size: .8rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
     }
-  }
-  .usercomment-form-container {
-    margin-top: 1.25rem;
+    .comment-footer {
+      border-bottom: 1px solid hsl(216, 8%, 88%);
+      padding-bottom: .75rem;
+    }
   }
 
-}
+  @keyframes entry-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(100px) scale(1.03);
+      -webkit-transform: translateY(100px) scale(1.03);
+      -moz-transform: translateY(100px) scale(1.03);
+      -o-transform: translateY(100px) scale(1.03);
+    }
+
+    50% {
+      opacity: 0.75;
+      transform: translateY(30px) scale(1.01);
+      -webkit-transform: translateY(30px) scale(1.01);
+      -moz-transform: translateY(30px) scale(1.01);
+      -o-transform: translateY(30px) scale(1.01);
+    }
+
+    80% {
+      opacity: 0.90;
+      transform: translateY(10px) scale(1.002);
+      -webkit-transform: translateY(10px) scale(1.002);
+      -moz-transform: translateY(10px) scale(1.002);
+      -o-transform: translateY(10px) scale(1.002);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+      -webkit-transform: translateY(0px) scale(1);
+      -moz-transform: translateY(0px) scale(1);
+      -o-transform: translateY(0px) scale(1);
+    }
+  }

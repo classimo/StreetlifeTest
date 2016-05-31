@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from './Avatar';
 
-export default class MessageHeader extends React.Component {
+export default class CommentHeader extends React.Component {
     timeAgo(date) {
         var date = new Date(date);
         var seconds = Math.floor((new Date() - date) / 1000);
@@ -31,13 +31,12 @@ export default class MessageHeader extends React.Component {
     }
     render() {
         return (
-            <div className="message-header">
+            <div className="comment-header">
                 <Avatar src={this.props.avatar} />
                 <div>
-                    <span className="message-name">{this.props.authorName}</span>
-                    <span className="message-time">{this.timeAgo(this.props.updatedAt)}</span>
+                    <span className="comment-name">{this.props.authorName}</span>
+                    <span className="comment-time">{this.timeAgo(this.props.updatedAt)}</span>
                 </div>
-                <h5 className="message-subject">{this.props.subject}</h5>
             </div>
         )
     }
