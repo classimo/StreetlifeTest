@@ -1,7 +1,6 @@
 
   .Message {
     margin-top: 1.25rem;
-    //margin-left: 1.25rem;
     &.leave{
       opacity: 1;
     }
@@ -144,7 +143,7 @@
       -webkit-transform: translateY(30px) scale(1.01);
       -moz-transform: translateY(30px) scale(1.01);
       -o-transform: translateY(30px) scale(1.01);
-    }
+      }
 
     80% {
       opacity: 0.90;
